@@ -5,15 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>Android Dialog | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Toast사용자에게 메시지를 알리면서 사용자 행동을 방해하지 않는며 시간이 지나면 자동으로 사라진다.그래서 사용자에게 꼭 알려야 하는건 일단 다이얼로그로 띄어야 한다. makeText(Context context, int resId, int duration)makeText(Context context, CharSequence text, int duratio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Dialog">
+<meta property="og:url" content="http://yoursite.com/2019/01/02/AndroidDialog/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Toast사용자에게 메시지를 알리면서 사용자 행동을 방해하지 않는며 시간이 지나면 자동으로 사라진다.그래서 사용자에게 꼭 알려야 하는건 일단 다이얼로그로 띄어야 한다. makeText(Context context, int resId, int duration)makeText(Context context, CharSequence text, int duratio">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-01T15:58:44.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Android Dialog">
+<meta name="twitter:description" content="Toast사용자에게 메시지를 알리면서 사용자 행동을 방해하지 않는며 시간이 지나면 자동으로 사라진다.그래서 사용자에게 꼭 알려야 하는건 일단 다이얼로그로 띄어야 한다. makeText(Context context, int resId, int duration)makeText(Context context, CharSequence text, int duratio">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-AndroidDialog" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-AndroidDialog" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/01/02/AndroidDialog/" class="article-date">
   <time datetime="2019-01-01T15:58:44.025Z" itemprop="datePublished">2019-01-02</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/AndroidDialog/">Android Dialog</a>
+    <h1 class="article-title" itemprop="name">
+      Android Dialog
     </h1>
   
 
@@ -136,240 +138,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-WebServer" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/WebServer/" class="article-date">
-  <time datetime="2019-01-01T15:58:16.660Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>layout: post</p>
-<h2 id="title-“WEB-SERVER-WAMP-vs-XAMPP-MONGODB”"><a href="#title-“WEB-SERVER-WAMP-vs-XAMPP-MONGODB”" class="headerlink" title="title:  “WEB SERVER : WAMP vs XAMPP + MONGODB”"></a>title:  “WEB SERVER : WAMP vs XAMPP + MONGODB”</h2><p>==가장 먼저 web server란 무엇인가?==</p>
-<p>웹 서버(Web Server)는 HTTP를 통해 웹 브라우저에서 요청하는 HTML 문서나 오브젝트(이미지 파일 등)을 전송해주는 서비스 프로그램을 말한다.</p>
-<p>==왜 내가 web server 가 필요한가?==</p>
-<p>Ethernet 부분을 보면 아두이노에서 측정된 값이 웹에 저장되고 웹에서 앱에게 쏘아주는 그림을 볼 수 있다.</p>
-<p>그냥 아두이노 값을 웹에서 받으려고 웹 서버가 필요한거다!</p>
-<p>==web server WAMP랑 XAMPP가 있는데 무엇을 사용할 것인가?==</p>
-<p>WAMP: acronym for Windows Operating System, Apache(Web server), MySQL Database and PHP Language.</p>
-<p>XAMPP: acronym for X (any Operating System), Apache (Web server), MySQL Database, PHP Language and PERL.</p>
-<p>요약하자면 XAMPP는 WAMP보다 더 많은 OS를 지원하고 좀 더 많은 기능이 있다고만 생각하면 된다.</p>
-<p>==나는 왜 XAMPP를 선택하였는가?==</p>
-<p>단순하다 나는 OS가 윈도우가 아닌 리눅스에서 돌릴 것이다.</p>
-<p>그래서 나는 반강제?로 XAMPP를 사용 하려고 한다.</p>
-<p>==MONGDB 너 대체 뭐하는 애니?==</p>
-<p>말로만 듣던 몽고DB 지금까지 학교 다니며 배운 MYSQL과 다른게 뭐야?</p>
-<p>이번 기회에 드디어 알 수 있게 되었다.</p>
-<p>내가 알아 본 것은 이렇다.</p>
-<p>몽고 db는 nosql로써 관계형 모델을 사용하지 않으며, mysql과 같은 오픈 소스이고 스키마 없이 동작 한다.</p>
-<p>스키마? </p>
-<p>mysql에서 그 테이블 만들어서 거기에 값을 넣는데 nosql은 그게 아니고 그냥 값을 막 넣어서 뺄 때 조심히 빼야된다</p>
-<p>왜냐면 상관 없는 값들도 순서 없이 막 들어가 있기 때문이다!</p>
-<p>==XAMPP와 MONGO DB의 연결==</p>
-<p>나는 XAMPP를 사용하는데 평범하게 가운데에 박힌 저 M 처럼 편안하게 MYSQL을 쓰면 좋겠지만!</p>
-<p>처음으로 몽고DB를 써보려고 한다.</p>
-<p>그래서 연결하는 방법을 찾고 몽고DB를 설치하려 하였지만..</p>
-<p>무엇이 문제일까.. 실패 했다..</p>
-<p>뭐 다시 해봐야지! </p>
+  
+    <a href="/2019/01/02/WebServer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/WebServer/" data-id="cjqdxuw5c0002uwutd3u65rig" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Ethernet" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/Ethernet/" class="article-date">
-  <time datetime="2019-01-01T15:57:48.696Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/Ethernet/">Ethernet</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>가장 먼저.. 내가 블로그는 처음이라 글 쓰는 것도 이상하고</p>
-<p>말에 두서가 없다고해서 너무 뭐라고 하는 사람은 없기를 바란다..</p>
-<p>오늘은 졸작을 해야 되서 이더넷 통신을 한번 해보려고 하였다.</p>
-<p>근데 큰 문제가 있었는데 아두이노를 이용해 이더넷 통신을 </p>
-<p>하려고 보니까 랜선을 직접 꽂아야 하는데</p>
-<p>우리 학교에서는 랜선을 뽑아쓸 수 없어서 랜선을 연결을 하지 못했다.</p>
-<p>그래서 오늘은 못하고 내일 랜선을 들고 학교를 가야 한다.</p>
-<p>그래도 뭐 공부 했으니까 공부한걸 정리해보자면</p>
-<p>이더넷은 컴퓨터 네트워크 기술의 하나로, 전세계의 사무실이나 가정에서 일반적으로 사용되는 LAN에서 가장 많이 활용되는 기술 규격이며</p>
-<p>위에서 보듯이 LAN을 연결하여 하는 방식이므로 무선이 아닌 유선 방식이다.</p>
-<p>나는 이 이더넷 기술을 통해 아두이노와 웹 서버와 연결하고 </p>
-<p>웹 서버에서 내가 만든 어플로 값을 내보내는 것을 할 거였다.</p>
-<p><img src="C:\Users\dudck\Desktop\picture.PNG" alt="picture.PNG"></p>
-<p>이렇게!</p>
-<p>가장 먼저 안드로이드 이더넷 통신을 이용해 웹 서버에</p>
-<p>아두이노에 측정 된 값을 보내야 하고.</p>
-<p>두번째 웹 서버에 보내진 측정 값을 FCM(핸드폰에 알림 띄우기)과</p>
-<p>내가 만든 어플에 값을 보내야 한다.</p>
-<p>어.. 근데 오늘은 한게 없으니까.. 여기까지!</p>
-<p>천천히 이 블로그를 채우며 졸작의 완성 과정까지 모든것을 기록 할 것이다!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/Ethernet/" data-id="cjqdxuw5b0001uwutogqm5rxo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-first-post-1" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/first-post-1/" class="article-date">
-  <time datetime="2019-01-01T15:54:10.000Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/first-post-1/">first-post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>해내고 말겠어</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/first-post-1/" data-id="cjqdxpzwz0000l4utqpf5hzjc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-first-post" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/first-post/" class="article-date">
-  <time datetime="2019-01-01T15:45:18.000Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/first-post/">first-post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>wow 내가 이걸 해내다니 믿을 수 없어!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/first-post/" data-id="cjqdxpzxe0001l4uthb1xvfhh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/hello-world/" class="article-date">
-  <time datetime="2019-01-01T15:34:01.411Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/hello-world/" data-id="cjqdxpzxf0002l4utce6u3c7s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
