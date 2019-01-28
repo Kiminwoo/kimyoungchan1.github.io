@@ -62,6 +62,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-AndroidStudio_TabbedActivity" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/28/AndroidStudio_TabbedActivity/" class="article-date">
+  <time datetime="2019-01-28T02:31:41.788Z" itemprop="datePublished">2019-01-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/28/AndroidStudio_TabbedActivity/">Android Studio - Tabbed Activity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>요즘에 안드로이드 스튜디오를 공부하고 있어서 그중에서 많이 쓰이는 탭에 대해 공부를 하던 중<br>tabbed activity가 있고 이것을 사용하면 쉽게 탭창을 만들고 스와이프 할 수 있다는 것을 알았다.</p>
+<p>하지만 내가 알고싶은건 기본 tabbed activity에서 아주 살짝 그냥 어디에 쓰면 탭의 이름이 바뀌고 어디에 쓰면 내용이 바뀐다. 이정도만 알고 싶었는데 인터넷은 정보의 바다. 쓸데없는 정보가 너무너무 많다.</p>
+<p>그래서 내가 직접 정리 해보았다.</p>
+<p>참고 사이트는 외국분의 유튜브를 보고 하였다.<br><a href="{https://wn.com/tutorial_for_creating_android_swiping_application_using_tabbed_activity_on_android_studio}" title="참고 사이트">https://wn.com/tutorial_for_creating_android_swiping_application_using_tabbed_activity_on_android_studio</a></p>
+<p>가장 먼저 프로젝트를 만들고 기본 Tabbed activity를 만들고 나는 Action bar tabs를 선택하여 만든 후 실행하면 잘 돌아가지만 나 같은 초보는 이해할수 없고 구글에서 검색해서 찾아도 잘 못찾겠다;;</p>
+<p><img width="241" alt="1" src="https://user-images.githubusercontent.com/26785513/51812066-5336ac00-22f3-11e9-86cf-b45f452af714.PNG"></p>
+<p>내가 여기서 건든 부분은 메인 엑티비티에 122번째 줄 조금과 프레그멘트가 하나 더 생긴것 정도 밖에 없다.<br>fragment_first.xml은 fragment_main을 이름만 바꾼 것이다.</p>
+<h4 id="메인-엑티비티"><a href="#메인-엑티비티" class="headerlink" title="메인 엑티비티"></a>메인 엑티비티</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br></pre></td><td class="code"><pre><span class="line">package //본인 패키지 적으세요</span><br><span class="line"></span><br><span class="line">import android.support.design.widget.TabLayout;</span><br><span class="line">import android.support.design.widget.FloatingActionButton;</span><br><span class="line">import android.support.design.widget.Snackbar;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.support.v7.widget.Toolbar;</span><br><span class="line"></span><br><span class="line">import android.support.v4.app.Fragment;</span><br><span class="line">import android.support.v4.app.FragmentManager;</span><br><span class="line">import android.support.v4.app.FragmentPagerAdapter;</span><br><span class="line">import android.support.v4.view.ViewPager;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.view.LayoutInflater;</span><br><span class="line">import android.view.Menu;</span><br><span class="line">import android.view.MenuItem;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.view.ViewGroup;</span><br><span class="line"></span><br><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * The &#123;@link android.support.v4.view.PagerAdapter&#125; that will provide</span><br><span class="line">     * fragments for each of the sections. We use a</span><br><span class="line">     * &#123;@link FragmentPagerAdapter&#125; derivative, which will keep every</span><br><span class="line">     * loaded fragment in memory. If this becomes too memory intensive, it</span><br><span class="line">     * may be best to switch to a</span><br><span class="line">     * &#123;@link android.support.v4.app.FragmentStatePagerAdapter&#125;.</span><br><span class="line">     */</span><br><span class="line">    private SectionsPagerAdapter mSectionsPagerAdapter;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * The &#123;@link ViewPager&#125; that will host the section contents.</span><br><span class="line">     */</span><br><span class="line">    private ViewPager mViewPager;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);</span><br><span class="line">        setSupportActionBar(toolbar);</span><br><span class="line">        // Create the adapter that will return a fragment for each of the three</span><br><span class="line">        // primary sections of the activity.</span><br><span class="line">        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());</span><br><span class="line"></span><br><span class="line">        // Set up the ViewPager with the sections adapter.</span><br><span class="line">        mViewPager = (ViewPager) findViewById(R.id.container);</span><br><span class="line">        mViewPager.setAdapter(mSectionsPagerAdapter);</span><br><span class="line"></span><br><span class="line">        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);</span><br><span class="line"></span><br><span class="line">        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));</span><br><span class="line">        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));</span><br><span class="line"></span><br><span class="line">        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);</span><br><span class="line">        fab.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View view) &#123;</span><br><span class="line">                Snackbar.make(view, &quot;Replace with your own action&quot;, Snackbar.LENGTH_LONG)</span><br><span class="line">                        .setAction(&quot;Action&quot;, null).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean onCreateOptionsMenu(Menu menu) &#123;</span><br><span class="line">        // Inflate the menu; this adds items to the action bar if it is present.</span><br><span class="line">        getMenuInflater().inflate(R.menu.menu_main, menu);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean onOptionsItemSelected(MenuItem item) &#123;</span><br><span class="line">        // Handle action bar item clicks here. The action bar will</span><br><span class="line">        // automatically handle clicks on the Home/Up button, so long</span><br><span class="line">        // as you specify a parent activity in AndroidManifest.xml.</span><br><span class="line">        int id = item.getItemId();</span><br><span class="line"></span><br><span class="line">        //noinspection SimplifiableIfStatement</span><br><span class="line">        if (id == R.id.action_settings) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return super.onOptionsItemSelected(item);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * A placeholder fragment containing a simple view.</span><br><span class="line">     */</span><br><span class="line">    public static class PlaceholderFragment extends Fragment &#123;</span><br><span class="line">        /**</span><br><span class="line">         * The fragment argument representing the section number for this</span><br><span class="line">         * fragment.</span><br><span class="line">         */</span><br><span class="line">        private static final String ARG_SECTION_NUMBER = &quot;section_number&quot;;</span><br><span class="line"></span><br><span class="line">        public PlaceholderFragment() &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Returns a new instance of this fragment for the given section</span><br><span class="line">         * number.</span><br><span class="line">         */</span><br><span class="line">        public static PlaceholderFragment newInstance(int sectionNumber) &#123;</span><br><span class="line">            PlaceholderFragment fragment = new PlaceholderFragment();</span><br><span class="line">            Bundle args = new Bundle();</span><br><span class="line">            args.putInt(ARG_SECTION_NUMBER, sectionNumber);</span><br><span class="line">            fragment.setArguments(args);</span><br><span class="line">            return fragment;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public View onCreateView(LayoutInflater inflater, ViewGroup container,</span><br><span class="line">                                 Bundle savedInstanceState) &#123;</span><br><span class="line"></span><br><span class="line">            View rootView = null;</span><br><span class="line">            switch (getArguments().getInt(ARG_SECTION_NUMBER))&#123;</span><br><span class="line">                case 1:</span><br><span class="line">                    //do something;</span><br><span class="line">                    rootView = inflater.inflate(R.layout.fragment_first, container, false);</span><br><span class="line">                    break;</span><br><span class="line">                case 2:</span><br><span class="line">                    // something other</span><br><span class="line">                    rootView = inflater.inflate(R.layout.fragment_second, container, false);</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return rootView;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * A &#123;@link FragmentPagerAdapter&#125; that returns a fragment corresponding to</span><br><span class="line">     * one of the sections/tabs/pages.</span><br><span class="line">     */</span><br><span class="line">    public class SectionsPagerAdapter extends FragmentPagerAdapter &#123;</span><br><span class="line"></span><br><span class="line">        public SectionsPagerAdapter(FragmentManager fm) &#123;</span><br><span class="line">            super(fm);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public Fragment getItem(int position) &#123;</span><br><span class="line">            // getItem is called to instantiate the fragment for the given page.</span><br><span class="line">            // Return a PlaceholderFragment (defined as a static inner class below).</span><br><span class="line">            return PlaceholderFragment.newInstance(position + 1);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public int getCount() &#123;</span><br><span class="line">            // Show 3 total pages.</span><br><span class="line">            return 2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>나는 2개의 탭만 만들고 실행하였지만 3개의 탭을 만들고 싶으면 getCount부분을 3으로 바꾸면 된다.</p>
+<p>그 후에 레이아웃부분에서 뉴 -&gt; 프레그먼트 -&gt; 프레그먼트(블랭크) 를 눌러 fragment_second를 만들면 클래스 파일도 자동으로 추가 된다.</p>
+<p>그 후에 위에 적은 메인엑티비티를 실행하면 잘 동작하고 탭 3개를 쓰는 사람은 프레그먼트 써드를 만든 후 case 3:을 추가하고 getCount 부분도 3으로 바꾸면 된다.</p>
+<p>아 그리고 뷰부분을 꾸미고 싶다면 꾸미고 싶은 프레그먼트.xml 파일로 들어가 자기가 원하는 방식으로 꾸미거나 설정하면 이제는 탭 모두가 아니라 하나의 탭만 적용 되는 것을 볼 수 있다.</p>
+<p>도움이 될지 안될지 모르는 이상한 글이 되어버렸지만 진짜 조금의 도움이라도 됐으면 좋겠다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/28/AndroidStudio_TabbedActivity/" data-id="cjrfqtzpa0008oout8rct3bby" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-How to upload in hexo" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/01/10/How to upload in hexo/" class="article-date">
@@ -104,7 +153,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/10/How to upload in hexo/" data-id="cjqq0qbfb0004s8utnmsmaeh5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/10/How to upload in hexo/" data-id="cjrfqtzov0004ooutrye6rd2w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -145,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/10/2019-01-10-FirstReport/" data-id="cjqq0qbel0000s8utu5ap6efh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/10/2019-01-10-FirstReport/" data-id="cjrfqtzok0000ooutvzpxg1rl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/AndroidDialog/" data-id="cjqq0qbf60001s8ut1wec7gzc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/AndroidDialog/" data-id="cjrfqtzoq0001oouttkoyv5uq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/WebServer/" data-id="cjqq0qbfc0005s8ut7tlr6rxw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/WebServer/" data-id="cjrfqtzow0005ooutulap1990" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/Ethernet/" data-id="cjqq0qbf80002s8ut54tso0t5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/Ethernet/" data-id="cjrfqtzos0002ooutwfuvg40l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -378,7 +427,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/first-post-1/" data-id="cjqq0qbfe0006s8utk2z8lpjm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/first-post-1/" data-id="cjrfqtzou0003ooutdfxj8zk5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -415,7 +464,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/first-post/" data-id="cjqq0qbf90003s8utpag7vng1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/first-post/" data-id="cjrfqtzox0006oout6khz4j6i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -460,7 +509,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/hello-world/" data-id="cjqq0qbff0007s8ut5svbas0m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/hello-world/" data-id="cjrfqtzoy0007ooutkr82g0ls" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,6 +550,10 @@
       <ul>
         
           <li>
+            <a href="/2019/01/28/AndroidStudio_TabbedActivity/">Android Studio - Tabbed Activity</a>
+          </li>
+        
+          <li>
             <a href="/2019/01/10/How to upload in hexo/">(나를 위한) HEXO 블로그 업로드</a>
           </li>
         
@@ -514,10 +567,6 @@
         
           <li>
             <a href="/2019/01/02/WebServer/">WEB SERVER : WAMP vs XAMPP + MONGODB</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/02/Ethernet/">Ethernet</a>
           </li>
         
       </ul>
